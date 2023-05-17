@@ -17,6 +17,7 @@ pipeline {
 		        mkdir ${dir}
                         cd ${dir}
                         git remote add origin ${repo} || git remote set-url origin ${repo}
+			git branch ${branch}
                         git pull origin ${branch}
                         exit
                         EOF
