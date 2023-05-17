@@ -17,9 +17,10 @@ pipeline {
 		        mkdir ${dir}
                         cd ${dir}
 			git init
-                        git remote add origin ${repo} || git remote set-url origin ${repo}
-			git branch ${branch}
-                        git pull origin ${branch}
+			git branch master
+                        git remote add origin ${repo}
+                        git pull origin master
+			git checkout ${branch}
                         exit
                         EOF
                     """
