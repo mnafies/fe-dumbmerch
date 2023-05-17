@@ -16,6 +16,7 @@ pipeline {
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
 		        mkdir ${dir}
                         cd ${dir}
+			git init
                         git remote add origin ${repo} || git remote set-url origin ${repo}
 			git branch ${branch}
                         git pull origin ${branch}
