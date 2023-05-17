@@ -1,10 +1,6 @@
-FROM node:20 AS build-env
-COPY . /app
+FROM node:16-alpine
 WORKDIR /app
-
-RUN npm ci --omit=dev
-
-FROM gcr.io/distroless/nodejs20-debian11
-COPY --from=build-env /app /app
-WORKDIR /app
+COPY . .
+RUN npm install
+EXPOSE 3000
 CMD [ "npm", "start" ]
