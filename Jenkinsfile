@@ -1,5 +1,5 @@
 def branch = "cicd"
-def repo = "https://github.com/nikymn/fe-dumbmerch.git"
+def repo = "git@github.com:nikymn/fe-dumbmerch.git"
 def cred = "appserver"
 def dir = "~/dumbmerch-fe"
 def server = "nafis@103.37.125.112"
