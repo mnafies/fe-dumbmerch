@@ -14,6 +14,7 @@ pipeline {
             steps {
                 sshagent([cred]) {
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+		        mkdir ${dir}
                         cd ${dir}
                         git remote add origin ${repo} || git remote set-url origin ${repo}
                         git pull origin ${branch}
