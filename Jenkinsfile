@@ -21,6 +21,7 @@ pipeline {
 			git pull origin master
 			git branch ${branch}
 			git checkout ${branch}
+			git pull origin ${branch}
                         exit
                         EOF
                     """
