@@ -1,7 +1,7 @@
 def branch = "cicd"
 def repo = "git@github.com:nikymn/fe-dumbmerch.git"
 def cred = "appserver"
-def dir = "~/dumbmerch-fe"
+def dir = "~/fe-dumbmerch"
 def server = "nafis@103.37.125.112"
 def imagename = "dumbmerch-fe"
 def dockerusername = "nikymn"
@@ -18,8 +18,8 @@ pipeline {
                         cd ${dir}
 			git init
                         git remote add origin ${repo}
-			git branch master
-                        git pull origin master
+			git pull origin master
+			git branch ${branch}
 			git checkout ${branch}
                         exit
                         EOF
