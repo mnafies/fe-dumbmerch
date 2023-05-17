@@ -17,8 +17,8 @@ pipeline {
 		        mkdir ${dir}
                         cd ${dir}
 			git init
-			git branch master
                         git remote add origin ${repo}
+			git branch master
                         git pull origin master
 			git checkout ${branch}
                         exit
