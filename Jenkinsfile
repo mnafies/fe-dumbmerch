@@ -1,4 +1,4 @@
-def branch = "main"
+def branch = "cicd"
 def repo = "https://github.com/nikymn/fe-dumbmerch.git"
 def cred = "appserver"
 def dir = "~/fe-dumbmerch"
